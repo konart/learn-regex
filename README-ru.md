@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/bYwl7Vf.png" alt="Learn Regex">
 </p><br/>
 
-## Translations:
+## Переводы:
 
 * [English](README.md)
 * [Español](README-es.md)
@@ -12,62 +12,59 @@
 * [中文版](README-cn.md)
 * [日本語](README-ja.md)
 * [한국어](README-ko.md)
-* [Turkish](README-tr.md)
 * [Русский](README-ru.md)
 
-## What is Regular Expression?
+## Что такое Регулярное Выражение?
 
-> Regular expression is a group of characters or symbols which is used to find a specific pattern from a text.
+> Регулярное выражение это группа символов, используемых в качестве шаблона для поиска соответствия в тексте.
 
-A regular expression is a pattern that is matched against a subject string from
-left to right. The word "Regular expression" is a mouthful, you will usually
-find the term abbreviated as "regex" or "regexp". Regular expression is used for
-replacing a text within a string, validating form, extract a substring from a
-string based upon a pattern match, and so much more.
+Регулярное выражение это шаблон, который сопоставляется с целевой строкой слева направо.
+Словосочетание "Регулярное выражение" громоздко, обычно вам будут встречаться термины "regex" или "regexp".
+Регулярное выражение используется для замены текста в строке, валидации формы, получение подстроки основываясь
+на соответствии шаблону и мно для чего ещё.
 
-Imagine you are writing an application and you want to set the rules for when a
-user chooses their username. We want to allow the username to contain letters,
-numbers, underscores and hyphens. We also want to limit the number of characters
-in username so it does not look ugly. We use the following regular expression to
-validate a username:
+Представьте, что вы пишете приложение и вам надо установить правила на случай, когда пользователь должен выбрать
+себе имя пользователя. Мы хотим, чтобы имя пользователя могло содержать буквы, числа, подчеркивания и дефисы.
+Мы также хотим установить окраничение на количество символов в имени пользователя, чтобы оно не выглядело ужасно.
+Мы используем следующее регулярное выражение для проверки имени пользователя:
 
 <br/><br/>
 <p align="center">
   <img src="./img/regexp-en.png" alt="Regular expression">
 </p>
 
-Above regular expression can accept the strings `john_doe`, `jo-hn_doe` and
-`john12_as`. It does not match `Jo` because that string contains uppercase
-letter and also it is too short.
+Регулярное выражение выше допускает строки `john_doe`, `jo-hn_doe` и
+`john12_as`. Строка `Jo` не пройдет проверку, потому что она содержит букву в верхнем регистре
+и при этом слишком короткая.
 
-## Table of Contents
+## Содержание
 
-- [Basic Matchers](#1-basic-matchers)
-- [Meta character](#2-meta-characters)
-  - [Full stop](#21-full-stop)
-  - [Character set](#22-character-set)
-    - [Negated character set](#221-negated-character-set)
-  - [Repetitions](#23-repetitions)
-    - [The Star](#231-the-star)
-    - [The Plus](#232-the-plus)
-    - [The Question Mark](#233-the-question-mark)
-  - [Braces](#24-braces)
-  - [Character Group](#25-character-group)
-  - [Alternation](#26-alternation)
-  - [Escaping special character](#27-escaping-special-character)
-  - [Anchors](#28-anchors)
-    - [Caret](#281-caret)
-    - [Dollar](#282-dollar)
-- [Shorthand Character Sets](#3-shorthand-character-sets)
-- [Lookaround](#4-lookaround)
-  - [Positive Lookahead](#41-positive-lookahead)
-  - [Negative Lookahead](#42-negative-lookahead)
-  - [Positive Lookbehind](#43-positive-lookbehind)
-  - [Negative Lookbehind](#44-negative-lookbehind)
-- [Flags](#5-flags)
-  - [Case Insensitive](#51-case-insensitive)
-  - [Global search](#52-global-search)
-  - [Multiline](#53-multiline)
+- [Простые символы](#1-basic-matchers)
+- [Мета символы](#2-meta-characters)
+  - [Точка](#21-full-stop)
+  - [Наборы символов](#22-character-set)
+    - [Отрицательный набор символов](#221-negated-character-set)
+  - [Квантификация](#23-repetitions)
+    - [Звездочка](#231-the-star)
+    - [Плюс](#232-the-plus)
+    - [Вопросительный знак](#233-the-question-mark)
+  - [Фигурные скобки](#24-braces)
+  - [Группировка](#25-character-group)
+  - [Перечисление](#26-alternation)
+  - [Спец. символ экранирования](#27-escaping-special-character)
+  - [Якоря](#28-anchors)
+    - [Каретка](#281-caret)
+    - [Доллар](#282-dollar)
+- [Сокращения наборов символов](#3-shorthand-character-sets)
+- [Проверки](#4-lookaround)
+  - [Положительная опережающая проверка](#41-positive-lookahead)
+  - [Отрицательная опережающая проверка](#42-negative-lookahead)
+  - [Положительная ретроспективная проверка](#43-positive-lookbehind)
+  - [Отрицательная ретроспективная проверка](#44-negative-lookbehind)
+- [Флаги](#5-flags)
+  - [Нечувствительность к регистру](#51-case-insensitive)
+  - [Глобальный поиск](#52-global-search)
+  - [Многострочный поиск](#53-multiline)
 
 ## 1. Basic Matchers
 
