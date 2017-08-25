@@ -3,7 +3,7 @@
 <img src="https://i.imgur.com/bYwl7Vf.png" alt="Learn Regex">
 </p><br/>
 
-## Translations:
+## Переводы:
 
 * [English](README.md)
 * [Español](README-es.md)
@@ -14,30 +14,28 @@
 * [한국어](README-ko.md)
 * [Русский](README-ru.md)
 
-## What is Regular Expression?
+## Что такое регулярное выражение?
 
-> Regular expression is a group of characters or symbols which is used to find a specific pattern from a text.
+> Регулярное выражение это группа символов, используемых в качестве шаблона для поиска соответствия в тексте.
 
-A regular expression is a pattern that is matched against a subject string from
-left to right. The word "Regular expression" is a mouthful, you will usually
-find the term abbreviated as "regex" or "regexp". Regular expression is used for
-replacing a text within a string, validating form, extract a substring from a
-string based upon a pattern match, and so much more.
+Регулярное выражение это шаблон, который сопоставляется с целевой строкой слева направо.
+Словосочетание "Регулярное выражение" громоздко, обычно вам будут встречаться термины "regex" или "regexp".
+Регулярное выражение используется для замены текста в строке, валидации формы, получение подстроки основываясь
+на соответствии шаблону и мно для чего ещё.
 
-Imagine you are writing an application and you want to set the rules for when a
-user chooses their username. We want to allow the username to contain letters,
-numbers, underscores and hyphens. We also want to limit the number of characters
-in username so it does not look ugly. We use the following regular expression to
-validate a username:
+Представьте, что вы пишете приложение и вам надо установить правила на случай, когда пользователь должен выбрать
+себе имя пользователя. Мы хотим, чтобы имя пользователя могло содержать буквы, числа, подчеркивания и дефисы.
+Мы также хотим установить окраничение на количество символов в имени пользователя, чтобы оно не выглядело ужасно.
+Мы используем следующее регулярное выражение для проверки имени пользователя:
 
 <br/><br/>
 <p align="center">
   <img src="./img/regexp-en.png" alt="Regular expression">
 </p>
 
-Above regular expression can accept the strings `john_doe`, `jo-hn_doe` and
-`john12_as`. It does not match `Jo` because that string contains uppercase
-letter and also it is too short.
+Регулярное выражение выше допускает строки `john_doe`, `jo-hn_doe` и
+`john12_as`. Строка `Jo` не пройдеи проверку, потому что она содержит букву в верхнем регистре
+и при этом слишком короткая.
 
 ## Table of Contents
 
